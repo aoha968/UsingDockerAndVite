@@ -33,10 +33,6 @@ mv ../vite.config.js ./vite.config.js
 # 不要なファイルを消す
 rm ../docker-compose.yml-e
 rm ../Dockerfile-e
-rm ../vite.config.js
-
-# .gitを削除する
-rm -rf .git
 
 # ビルド
 docker-compose build --no-cache

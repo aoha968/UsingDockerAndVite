@@ -26,6 +26,17 @@ docker run --rm -v ${PWD}:/app -w /app node:18-alpine yarn install
 mv ../docker-compose.yml ./docker-compose.yml
 mv ../Dockerfile ./Dockerfile
 
+# vite.config.jsを置き換える
+rm ./vite.config.js
+mv ../vite.config.js ./vite.config.js
+
 # 不要なファイルを消す
 rm ../docker-compose.yml-e
 rm ../Dockerfile-e
+rm ../vite.config.js
+
+# .gitを削除する
+rm -rf .git
+
+# ビルド
+docker-compose build --no-cache

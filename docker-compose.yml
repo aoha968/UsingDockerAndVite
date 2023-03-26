@@ -1,0 +1,18 @@
+version: "3.8"
+services:
+  REPLACE:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./:/app:cached
+#      - node_modules:/app/node_modules
+    environment:
+      - HOST=0.0.0.0
+      - CHOKIDAR_USEPOLLING=true
+    tty: true
+    ports:
+      - "5173:5173"
+    command: yarn dev
+#volumes:
+#  node_modules:

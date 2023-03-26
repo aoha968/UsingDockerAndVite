@@ -1,4 +1,9 @@
 #!/bin/bash
+# cloneしてきたGit情報はいらないので削除する
+rm -rf .git
+# 新しくGit管理を始める
+git init
+
 # 書き換えできるように権限をつける
 chmod a+rw Dockerfile
 chmod a+rw docker-compose.yml

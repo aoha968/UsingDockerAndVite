@@ -1,0 +1,14 @@
+# Ignore Docker image files
+docker-compose.override.yml
+.dockerignore
+
+# Ignore Vite build files
+/dist
+/node_modules
+
+# Ignore Vite configuration files
+/.env.local
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
